@@ -25,10 +25,13 @@ class ExercicioX{
     }
 
     System.out.println("\nFatorial"); 
-    int fatorial = 10;
-		for (int n = 10; n > 1; n--){
-      fatorial = fatorial * (n -1);
-      System.out.println(fatorial); 
-    }   
-	}
+    int fatorial = 1;
+	  for (int n = 1; n <= 10; n++) {
+      while (n >= 2){
+        fatorial = fatorial * n;
+        break;            
+      }
+     System.out.println("Fatorial de "+n+" = "+fatorial);
+   }
+  }
 }
