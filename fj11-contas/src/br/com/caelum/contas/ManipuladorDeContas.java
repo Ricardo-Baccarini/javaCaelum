@@ -13,11 +13,11 @@ public class ManipuladorDeContas {
 		// isso é polimorfismo
 		if (tipo.equals("Conta Corrente")) {
 			this.conta = new ContaCorrente();
-		} else if (tipo.equals("Conta Poupanca")) {
+		} else if (tipo.equals("Conta Poupança")) {
 			this.conta = new ContaPoupanca();
 		}
 		
-		this.conta  = new Conta();
+		//this.conta  = new Conta();
 		this.conta.setAgencia(evento.getString("agencia"));
 		this.conta.setNumero(evento.getInt("numero"));
 		this.conta.setTitular(evento.getString("titular"));
