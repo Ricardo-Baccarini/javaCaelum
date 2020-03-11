@@ -3,9 +3,13 @@ package br.com.caelum.contas.main;
 import br.com.caelum.contas.modelo.ContaCorrente;
 
 public class TesteErro {
-	public static void main(String [] args) {
+	public static void main(String[] args) {
 		System.out.println("Inicio do main");
-		metodo1();
+		try {
+			metodo1();
+		} catch (NullPointerException e) {
+			System.out.println("erro: " + e);
+		}
 		System.out.println("fim do main");
 	}
 
@@ -24,7 +28,8 @@ public class TesteErro {
 			if (i == 5) {
 				cc = null;
 			}
+
 		}
-		
+
 	}
 }
