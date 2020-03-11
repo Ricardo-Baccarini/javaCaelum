@@ -1,7 +1,5 @@
 package br.com.caelum.contas.modelo;
 
-
-
 public abstract class Conta {
 	protected double saldo;
 	private String titular;
@@ -16,7 +14,7 @@ public abstract class Conta {
 	}
 
 	public abstract String getTipo();
-	
+
 	public Conta(String titular) {
 		contador++;
 		identificador = contador;
@@ -70,10 +68,27 @@ public abstract class Conta {
 	public void setAgencia(String agencia) {
 		this.agencia = agencia;
 	}
-	
+
 	public void transfere(double valor, Conta conta) {
 		this.saca(valor);
 		conta.deposita(valor);
+	}
+
+	@Override
+	public String toString() {
+		return "[titular=" + titular + ",numero=" + numero + 
+				", agencia=" + agencia + "]";
+	}
+	
+	public boolean equals(Object obj) {
+		if (obj == null) {
+			return false;
+		}
+		
+		Conta outraConta = (Conta) obj;
+		
+		return this.numero == outraConta.numero && 
+				this.agencia.equals(outraConta.agencia);
 	}
 
 }
