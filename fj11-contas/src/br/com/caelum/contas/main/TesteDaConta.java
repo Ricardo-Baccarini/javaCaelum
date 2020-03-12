@@ -14,6 +14,6 @@ public class TesteDaConta {
 
 		System.out.println(Conta.getContador());
 		System.out.println(contaNovoTitular.getIdentificador());
-
+        System.out.println();
 	}
 }
